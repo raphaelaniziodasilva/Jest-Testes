@@ -1,0 +1,26 @@
+{
+  "name": "jest-testes",
+  "version": "1.0.0",
+  "description": "Testes unitários,  teste de Integração,  testes E2E (Ponta a ponta ou também conhecido como testes de interface)",
+  "main": "index.js",
+  "scripts": {
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "test:watch": "node --experimental-vm-modules node_modules/jest/bin/jest.js --detectOpenHandles --watch",
+    "test:coverage": "node --experimental-vm-modules node_modules/jest/bin/jest.js --detectOpenHandles --coverage"
+},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raphaelaniziodasilva/Jest-Testes.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/raphaelaniziodasilva/Jest-Testes/issues"
+  },
+  "homepage": "https://github.com/raphaelaniziodasilva/Jest-Testes#readme",
+  "devDependencies": {
+    "jest": "28.1.0"
+  },
+  "type": "module"
+}
