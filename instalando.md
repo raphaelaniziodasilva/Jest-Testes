@@ -17,11 +17,13 @@ O comando completo para executar o Jest fica assim: "test": "node --experimental
 
 Para simplificar o uso, você pode criar uma propriedade no scripts no arquivo package.json e colocar o seguinte:
 "scripts": {
+    O test vai testar os codigos
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
 
-    e opcional adicionar um :watch ou :coverage no final.
-
+    O test: watch vai assistir o nosso codigo e ficar procurando por alterações que podem ser feitas    
     "test:watch": "node --experimental-vm-modules node_modules/jest/bin/jest.js --detectOpenHandles --watch",
+
+    O test:coverage vai trazer a conertura de testes da nossa aplicação
     "test:coverage": "node --experimental-vm-modules node_modules/jest/bin/jest.js --detectOpenHandles --coverage"
 },
 
