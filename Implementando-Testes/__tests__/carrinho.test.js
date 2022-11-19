@@ -28,5 +28,38 @@ describe("Testes do carrinho", () => {
         // verificando a propriedade o objeto instanciado carrinho
         expect(carrinho).toHaveProperty("total")
     })
-    
+    // esperando o erro seja lançado no teste  
+    it("Deve lançar erro ao finalizado uma compra com o carrinho vazio", () => {
+        function lancarErro() {
+            const carrinho = new Carrinho()
+            carrinho.finalizaCompra()
+        }
+        expect(lancarErro).toThrowError("Carrinho de compras vazio")
+    })
+    it("Deve adicionar o frete", () => {
+        const carrinho = new Carrinho()
+        carrinho.adicionaFrete(15)
+        expect(carrinho.frete).toBe(15)
+    })
+    it("Deve finalizar as compras", () => {
+        // criando item
+        const item = new Item("Manga espada", 2.1, 2)
+        const item2 = new Item("Manga rosa", 3, 2)
+        // criar o carrinho
+        const carrinho = new Carrinho()
+        // adicionando os itens no carrinho
+        carrinho.adiciona(item)
+        carrinho.adiciona(item2)
+        // adicionando frete
+        carrinho.adicionaFrete(10)
+
+        // finalizando compra dos testes
+        expect(carrinho.finalizaCompra()).toStrictEqual({
+            subtotal: 10.2,
+            frete: 10,
+            total: 20.2,
+        })
+    })
+
+
 })
