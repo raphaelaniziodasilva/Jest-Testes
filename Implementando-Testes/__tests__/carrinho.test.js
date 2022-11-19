@@ -27,7 +27,6 @@ describe("Testes do carrinho", () => {
         const carrinho = new Carrinho()
         // verificando a propriedade o objeto instanciado carrinho
         expect(carrinho).toHaveProperty("total")
-
     })
     
 })
